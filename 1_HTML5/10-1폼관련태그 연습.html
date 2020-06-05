@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>10-1 폼관련 태그 연습</title>
+    </head>
+    <body>
+        <form method="GET">
+                <label>고객명 : </label> 
+                <input type="text" size="10"><br><br>
+                <label>전화번호 필수 : </label>
+                <input type="tel" size="15" required><br><br>
+                <label>E-mail : </label>
+                <input type="email"><br><br>
+                <label>피자 선택(필수) : </label>
+                <select name="pizza" required>
+                    <option value="cheese">치즈피자</option>
+                    <option value="potato">포테이토</option>
+                    <option selected>피자를 선택해주세요</option><br>
+                </select>
+                <fieldset>
+                    <legend>피자 사이즈(필수)</legend>
+                    <input type="radio" name="size" value="small" id="smaill" required> <label for="smaill">Small</label><br><br>
+                    <input type="radio" name="size" value="medium" id="medium" checked required> <label for="medium">Medium</label><br><br>
+                    <input type="radio" name="size" value="large" id="large" required> <label for="large">Large</label><br><br>
+                </fieldset>
+                <fieldset>
+                    <legend>토핑 선택</legend>
+                    <input type="checkbox" name="topping" value="bacon" id="bacon"><label>베이컨</label><br><br>
+                    <input type="checkbox" name="topping"" value="cheese" id="cheese"><label>치즈</label><br><br>
+                    <input type="checkbox" name="topping" value="onion" id="onion"><label>양파</label><br><br>
+                    <input type="checkbox" name="topping" value="mashroom" id="mashroom"><label>버섯</label><br><br>
+                </fieldset>
+                <br>
+                <label>희망 배송 시간 : </label>
+                <input type="time" name="time"><br><br>
+                <label>배송시 요청사항</label>
+                <textarea rows="3" cols="20" style="resize: none;"></textarea><br><br>
+                <button>주문하기</button>
+                
+        </form>
+
+    </body>
+</html>

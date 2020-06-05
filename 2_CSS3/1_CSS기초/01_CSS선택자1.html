@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>01.CSS선택자 1</title>
+
+        <style>
+            /* css 주석은 */
+
+            /* 모든 요소 선택자(*) */
+            *{
+                /* color: orange; */
+
+            }
+
+            /* 태그 선택자 */
+            p{
+                color: red;
+            }
+
+            /* 아이디 선택자 */
+            #id3{
+                color: blue;
+                background-color: violet;
+            }
+
+            /* 클래스 선태자 */
+            .class1{
+                background-color: gray;
+                color: rgb(46, 10, 131);
+            }
+            .class2{
+                background-color: turquoise;
+                color: rgb(194, 35, 35);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS란?</h1>
+        <p>Cascading Style Sheets 약자로
+            문서에 종속 된 스타일을 지정하는 시트<br>
+            (마크업 언어가 실제 표시되는 방법을 기술하는 언어)
+        </p>
+
+        <hr>
+        <h1>선택자란?</h1>
+        <p>
+            특정한 HTML 태그를 선택할 때 사용하는 기능으로<br>
+            태그를 선택하여 원하는 스타일과 기능을 적용할 수 있다.
+        </p>
+
+        <h2>CSS 기본 선택자</h2>
+        <h3>모든 요소(태그) 선택자(*)</h3>
+        <p>HTML문서 안에 모든 태그를 선택할 때 사용</p>
+
+        <hr>
+        <h3>태그 선택자(태그명)</h3>
+        <p>HTML 문서 내에 같은 태그를 모두 선택할 때 사용</p>
+        <pre>
+            p{ color : red } 와 같은 형태로 사용 됨
+        </pre>
+
+        <hr>
+        <h3>아이디 선택자(#)</h3>
+        <p>HTML 문서 내에 해당하는 아이디 속성의 값을 가진 태그만 선택할 때 사용<br><br>
+
+            *HTML 문서 내에서 태그별 id 속성 값은 유일해야 함(중복 X)
+        </p>
+        <pre>
+            #아이디 속성 값 { color : blue }
+        </pre>
+        <ol>
+            <li id="id1">아이디 선택자 테스트1</li>
+            <li id="id2">아이디 선택자 테스트2</li>
+            <li id="id3">아이디 선택자 테스트3</li>
+            <li id="id4">아이디 선택자 테스트4</li>
+            <li id="id5">아이디 선택자 테스트5</li>
+        </ol>
+
+        <hr>
+
+        <h3>클래스 선택자( . )</h3>
+        <p>
+            HTML문서 내에서 여러 태그를 동일한 클래스명으로 지정할 경우
+            동일한 스타일을 부여할 수 있음.
+        </p>
+        <pre>
+            .클래스명 { color : red }와 같은 형태로 사용
+        </pre>
+        <ul>
+            <li class="class1">클래스 선택자 테스트 1</li>
+            <li class="class1">클래스 선택자 테스트 1</li>
+            <li class="class2">클래스 선택자 테스트 2</li>
+            <li class="class2">클래스 선택자 테스트 2</li>
+            <li class="class1">클래스 선택자 테스트 1</li>
+        </ul>
+    </body>
+</html>

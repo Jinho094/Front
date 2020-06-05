@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>10- 2납품자 연습문제</title>
+</head>
+
+<body>
+    <form method="GET">
+        <fieldset>
+            <legend>납품자 정보</legend>
+            <ol>
+                <li>
+                    <label>납품자명(필수) : </label>
+                    <input type="text" name="name" size="10" required><br><br>
+                </li>   
+                <li>
+                    <label>email(필수) : </label>
+                    <input type="email" name="email" placeholder="answer@naver.com" required><br><br>
+                </li>
+                <li>
+                    <label>홈페이지 : </label>
+                    <input type="text" name="page" value="http://"><br><Br>
+                </li>
+                <li>
+                    <label>지역 : </label>
+                    <select name="region">
+                        <option value="seoul">서울</option>
+                        <option value="daegu">대구</option>
+                        <option value="busan" selected>부산</option>
+                    </select>
+                </li>
+            </ol>
+
+        </fieldset>
+        <fieldset>
+            <legend>납품 정보</legend>
+            <ul>
+                <li>
+                    <label>상품명(필수) : </label>
+                    <input type="text" name="product" required><br><br>
+                </li>
+                <li>
+                    <label>납품수량(필수) : </label>
+                    <input type="number" name="amount" min="100" placeholder="최소 100"><br><br>
+                </li>
+                <li>
+                    <label>납품등급(필수) : </label>
+                    <input type="range" name="raing" required><br><br>
+                </li>
+                <li>
+                    <label>기타사항 : </label>
+                    <textarea rows="2" cols="20"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <br>
+        <button>send message</button>
+    </form>
+
+</body>
+
+</html>
