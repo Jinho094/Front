@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <style>
+            header, nav, section, article, aside, footer{
+                border: 1px solid red;
+                box-sizing: border-box;
+
+                display: block;
+                /* 
+                    시맨틱 태그는 이름만 다른 div이지만
+                    IE8버전 이하에서는 시맨틱 태그를 인식하지 못하므로
+                    inline형식의 태그로 취급 됨
+                    이를 방지하기 위해 block으로 지정해둠.
+                 */
+            } 
+            body{
+                width: 1000px;
+                height: 800px;
+                margin: auto;
+            }
+
+            /* head */
+            header{
+                width: 100%;
+                height: 20%;
+            }
+            header > section{
+                height: 100%;
+                float: left;
+            }
+            #header-1{width: 20%;}
+            #header-2{width: 60%;}
+            #header-3{width: 15%;}
+
+            /* nav */
+            nav{
+                width: 100%;
+                height: 5%;
+                clear: both;
+            }
+
+            /* content */
+            #content{
+                width: 100%;
+                height: 55%;
+            }
+            #content > *{
+                /* id가 content인 요소의 모든 자식 */
+                height: 100%;
+                float: left;
+            }
+            #content > aside{
+                width: 15%;
+            }
+            #content-1{
+                width: 65%;
+            }
+            #content-2{
+                width: 20%;
+            }
+            #content-2 > header{
+                width: 100%;
+                height: 30%;
+            }
+            #content-2 > article{
+                width: 100%;
+                height: 70%;
+            }
+
+            footer{
+                width: 100%;
+                height: 20%;
+                clear: both;
+            }
+        </style>
+    <meta charset="UTF-8">
+        <title>07.시맨틱태그</title>
+        <!-- 페이지 구조를 특정 기능에 맞는 태그로 구분할 수 있게
+            html5부터 적용 된 태그.
+        
+            - 페이지 구조 파악이 쉽다.
+            - 검색엔진에 잘 검색이 노출이 된다.
+            - 웹 접근성이 향상된다.
+        -->
+    </head>
+    <body>
+        <header>
+            <section id="header-1"></section>
+            <section id="header-2"></section>
+            <section id="header-3"></section>
+        </header>
+
+        <nav></nav>
+
+        <section id="content">
+            <aside></aside>
+            <section id="content-1"></section>
+            <section id="content-2">
+                <header></header>
+                <article></article>
+            </section>
+        </section>
+
+        <footer></footer>
+    </body>
+</html>

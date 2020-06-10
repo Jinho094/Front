@@ -1,0 +1,302 @@
+/*웹문서 구조*/
+/* div{
+    border: 1px solid rgb(144, 9, 255);
+    box-sizing: border-box;
+} */
+.wrapper{
+    width: 1000px;
+    height: 800px;
+    margin: auto;
+}
+.header{
+    width: 100%;
+    height: 20%;
+}
+.header-float{
+    /*부모 요소의 높이와 똑같음*/
+    height: 100%;
+    float: left;
+}
+#header-1{
+    width: 20%;
+    position: relative;
+}
+#header-2{
+    width: 65%;
+    position: relative;
+}
+#header-3{
+    width: 15%;
+}
+.navigator{
+    width: 100%;
+    height: 5%;
+    clear: both;
+}
+.content{
+    width: 100%;
+    height: 55%;
+}
+.content-float{
+    /*부모 요소의 높이와 똑같음*/
+    height: 100%;
+    float: left;
+}
+#content-1{
+    width: 15%;
+}
+#content-2{
+    width: 60%;
+}
+#content-3{
+    width: 25%;
+}
+.footer{
+    width: 100%;
+    height: 20%;
+    clear: both;
+}
+/* 로그인 스타일 */
+.login-wrapper{
+    width: 100%;
+    height: 150px;
+}
+#login-form{
+    width: 100%;
+    height: 80%;
+}
+#login-form-join{
+    width: 100%;
+    height: 20%;
+   text-align: center;
+   line-height: 26px;
+}
+/* 아이디,비번 입력 영역 */
+#login-input{
+    height: 100%;
+    width: 65%;
+    float: left;
+}
+#login-button{
+    height: 100%;
+    width: 35%;
+    float: left;
+}
+/* 아이디 입력 영역 ,비밀번호 입력 영역 */
+#input-id-area,#input-pwd-area{
+    height: 50%;
+    width: 100%;
+}
+/* 아이디 비밀번호 입력상자 스타일 지정 */
+#input-id, #input-pwd{
+    height: 100%;
+    width: 100%;
+    /* input태그에 대한 box-sizing이 설정되지않았으므로 별도로 설정해 줌 */
+    box-sizing: border-box;
+   
+}
+/* 로그인 버튼 스타일 지정 */
+#login-btn{
+    height: 100%;
+    width: 100%;
+
+}
+
+/* 검색창 스타일 */
+  /* 검색창 영역 스타일 지정 */
+  #search-form{
+    width: 80%;
+    height: 30%;
+    margin: auto;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#search-text-area{
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+#search-btn-area{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+#input-search{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+#search-btn{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+#footer-1{
+    width: 100%;
+    height: 20%;
+}
+#footer-2{
+    width: 100%;
+    height: 80%;
+}
+
+/* footer 스타일 */
+
+/* footer - 1영역의 a태그 스타일 지정 */
+#footer-1 > a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 0px 10px 0px 10px;
+    /* 상 우 하 좌 */ 
+    line-height: 160%;
+}
+/* a태그 마우스 오버 시 색 변화 지정 */
+#footer-1 > a:hover{
+    color: deepskyblue;
+}
+
+/* footer-2 영역 스타일 지정 */
+#footer-2 > p{
+    font-size: 12px;
+    margin: 0;
+}
+
+/* footer-2의 자식 중 첫 번째 p태그 선택 */
+#footer-2 > p:first-child{
+    height: 80%;
+    width: 100%;
+}
+
+#footer-2 > p:last-child{
+    height: 20%;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* navigator 스타일 */
+
+#navi{
+    /* 메인 메뉴(ul) 영역 스타일 지정*/
+
+    /* 메인 메뉴가 왼쪽 상단에 붙을 수 있게 여백 제거 */
+    margin: 0;
+    padding: 0;
+
+    /* navigator 영역에서 메인 메뉴(ul)가 차지할 크기 지정 */
+    width: 100%;
+    height: 100%;
+
+    /* 메인 메뉴 불렛 제거 */
+    list-style-type: none;
+}
+#navi > li{
+    /* 메인 메뉴(ul)내용 스타일 지정 */
+    
+    /* 메인 메뉴를 왼쪽 정렬 */
+    float: left;
+
+    background-color: rgb(95, 147, 207);
+
+    /* 메인 메뉴 카테고리 크기 지정 */
+    width: 25%;
+    height: 100%;
+
+    /* 인 메뉴 글자 상하 가운데 조절 */
+    line-height: 40px;
+
+    /* 서브메뉴 위치를 position : absolute로 지정하기 위하여
+        부모 요소인 #navi > li에 position : relative 지정 */
+    position: relative;
+}
+
+#navi li a{
+    /* navi 후손 중 li태그의 후손인 a태그에 대해서 스타일 지정 */
+
+    /* a태그는 inline요소지만
+        크기를 지정할 수 있도록  inline-block형식으로 변경*/
+        display: inline-block;
+
+        /* a태그의 content 영역 크기 지정 */
+        width: 100%;
+
+        /* a태그 글씨 가운데 정렬 */
+        text-align: center;
+
+        /* a태그 밑줄 제거 */
+        text-decoration: none;
+
+        /* font 스타일 지정 */
+        font-size: 16px;
+        font-weight: bold;
+        font-family: "D2Coding";
+        color: rgba(255, 255, 255, 0.856);
+}
+#navi li:hover{
+    background-color: rgb(78, 216, 101);
+}
+#navi li{
+    transition-duration: 1s;
+}
+
+#navi li>ul{
+    /* position : absolute로 변경하여 content위에 표시되고, 위치를 제어할 수 있게 변경 */
+    position: absolute;
+    width: 100%;
+
+    /* 서브메뉴 배경색 지정 */
+    background-color: rgb(136, 190, 221);
+
+    /* 서브메뉴 불렛 제거 */
+    list-style-type: none;
+
+    /* 서브메뉴 여백 제거 */
+    margin: 0;
+    padding: 0;
+
+    /* 서브 메뉴를 투명하게 설정 */
+    opacity: 0;
+}
+
+#navi ul>li>a{
+    /* 서브메뉴에 a태그 숨기기 */
+    opacity: 0;
+}
+#navi ul>li{
+    /* 서브메뉴 높이를 0으로 만들어서 숨기기 */
+    height: 0;
+    line-height: 0;
+}
+#navi>li:hover ul, #navi>li:hover ul a{
+    /* 메인메뉴 카테고리에 마우스 오버 시, 서브메뉴 보이게 하기 */
+    opacity: 1;
+}
+#navi li:hover ul li{
+    /* 메인 메뉴 카테고리에 마우스 오버 시 서브메뉴 펼쳐지게 하기 */
+    height: 50px;
+    line-height: 50px;
+}
+#navi li ul{
+    /* 서브메뉴 펼쳐지는 시간 조절 */
+    transition-duration: 0.4s;
+}
+
+#home-logo{
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03.웹문서 구조2</title>
+    <!-- 외부로 분리된 css파일 연결 -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div id="header-1" class="header-float">
+                <a href="09.전체 폼 통합.html">
+                    <img src="googleLogo.jpg" id="home-logo">
+                </a>
+            </div>
+            <div id="header-2" class="header-float">
+                <form method="get" id="search-form">
+                    <div id="search-text-area">
+                        <input type="text" id="input-search" name="inputSearch">
+                    </div>
+                    <div id="search-btn-area">
+                        <button id="search-btn">검색</button>
+                    </div>
+                </form>
+            </div>
+            <div id="header-3" class="header-float"></div>
+        </div>
+        <div class="navigator">
+            <ul id="navi">
+                <li><a href="#">Home</a></li>
+                <li>
+                    <a href="#">Front-End</a>
+                    <ul>
+                        <li><a href="#">HTML5</a></li>
+                        <li><a href="#">CSS3</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">Ajax</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">게시판</a>
+                    <ul>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">자유 게시판</a></li>
+                        <li><a href="#">질문 게시판</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Q & A</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="content-1" class="content-float"></div>
+            <div id="content-2" class="content-float"></div>
+            <div id="content-3" class="content-float">
+                <!--로그인 폼 전체를 감싸는 div-->
+                <div class="login-wrapper">
+                    <!-- 입력,버튼이 위치한 form -->
+                    <form method="get" id="login-form">
+                        <!-- id,pwd 입력이 위치한 div -->
+                        <div id="login-input">
+                            <!-- 아이디 입력 영역 -->
+                            <div id="input-id-area">
+                                <input type="text" id="input-id" name="userId" placeholder="ID를 입력하세요.">
+                            </div>
+                            <!-- 비밀번호 입력 영역 -->
+                            <div id="input-pwd-area">
+                                <input type="password" id="input-pwd" name="userPwd" placeholder="PWD를 입력하세요.">
+                            </div>
+                        </div>
+                        <!-- 로그인 버튼이 위치한 div -->
+                        <div id="login-button">
+                            <!-- button태그의 type 기본값은 submit -->
+                            <button id="login-btn">로그인</button>
+                        </div>
+                    </form>
+                    <!-- 회원가입,ID/PWD 찾기 영역 div -->
+                    <div id="login-form-join">
+                        <a href="#">회원가입</a>&nbsp;&nbsp;
+                        <a href="#">ID/PWD 찾기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div id="footer-1">
+                <a href="#">이용약관</a> |
+                <a href="#">개인정보취급방식</a> |
+                <a href="#">인재채용</a> |
+                <a href="#">고객센터</a>
+            </div>
+
+            <div id="footer-2">
+                <p>
+                    강남지원 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F <br>
+                    강남지원 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F <br>
+                    강남지원 3관 : 서울특별시 강남구 테헤란로 130 호산빌딩 5F, 6F <br>
+                    종로지원 : 서울특별시 중구 남대문로 120 대일빌딩 2F, 3F <br>
+                    당산지원 : 서울특별시 영등포구 선유동2로 57 이레빌딩 (구관) 19F, 20F
+                </p>
+                <p>
+                    Copyright ⓒ 1998-2020 KH Information Educational Institute All Right Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

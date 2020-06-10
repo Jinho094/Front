@@ -1,0 +1,242 @@
+header, nav, section, article, aside, footer{
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+
+    display: block;
+    width: 100%;
+ }
+body{
+    width: 1000px;
+    height: 800px;
+    margin: auto;
+}
+
+/* head */
+header{
+    height: 20%;
+}
+/* nav */
+nav{
+    height: 5%;
+    clear: both;
+}
+
+/* section */
+#content {
+    height: 65%;
+}
+
+footer{
+    height: 10%;
+    clear: both;
+    position: relative;
+}
+
+
+/****************header관련 스타일************** */
+header > section{
+    height: 100%;
+    float: left;
+}
+#header-1{
+    width: 20%;
+    position: relative;
+}
+#header-2{
+    width: 65%;
+    position: relative;
+}
+#header-3{width: 15%;}
+#home-logo{
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;;
+}
+#main-logo{
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;;
+}
+
+/* ***************navi 스타일 **************/
+nav > ul{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(100, 170, 20)
+}
+nav li{
+    float: left;
+    list-style-type: none;
+    width: 25%;
+    height: 100%;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+}
+
+nav > ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+nav > ul li:hover{
+    background-color: rgb(147, 218, 42);
+}
+
+
+/* **************content 관련 스타일********* */
+#content > *{
+    height: 100%;
+    float: left;
+}
+#content > aside{
+    width: 15%;
+}
+#content > aside > img{
+    width: 100%;
+    height: 100%;
+}
+#content-1{
+    width: 60%;
+}
+#content-1 > section {
+    height: 50%;
+    width: 100%;
+}
+#content-1 > section > article{
+    float: left;
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+
+#content-1 a{
+    color: black;
+    text-decoration: none;
+}
+
+
+#content-1 article img{
+    width: 100%;
+    height: 90%;
+    padding: 20px 10px 0px 10px;
+            /* 상 우 하 좌 */
+    box-sizing: border-box;
+}
+
+#content-1 article p{
+    text-align: center;
+    margin: 0;
+}
+
+#content-2{
+    width: 25%;
+    position: relative;
+}
+#content-2 > * {width: 100%;}
+#content-2 > header{
+    height: 20%;
+}
+#content-2-1{height: 50%;}
+#content-2-2{height: 30%;}
+
+
+#content-2 img{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5px 0px;
+            /* 상하 좌우 */
+}
+
+
+
+
+
+/* 로그인 */
+
+#login-form{
+    width: 100%;
+    height: 70%;
+}
+#join-area{
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+}
+
+#input-text-area{
+    width: 65%;
+    height: 100%;
+    float: left;
+}
+#input-btn-area{
+    width: 35%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+#input-text-area > div{
+    width: 100%;
+    height: 50%;
+}
+#input-text-area > div > input{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* 로그인 입력 부분 중 ID 입력 영역*/
+#input-text-area > div:first-child{
+    padding-top: 10px;
+}
+/* 로그인 입력 부분 중 PWD 입력 영역*/
+#input-text-area > div:last-child{
+    padding-bottom: 5px;
+}
+
+/* 로그인 버튼 스타일 */
+#input-btn-area > button{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    margin: auto;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+#join-area > a{
+    text-decoration: none;
+    margin: 0px 10px;
+}
+
+footer > p{
+    text-align: center;
+    line-height: 300%;
+}
+
+footer > img{
+    position: relative;
+    margin: auto;
+    top: 0; bottom: 0; left: 0; right: 0;
+}

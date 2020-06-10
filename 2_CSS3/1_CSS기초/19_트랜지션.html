@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>19.트랜지션(Transition)</title>
+        <style>
+            .test1{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                border: 1px solid black;
+
+                transition-duration: 1s;
+            }
+            .test1:hover{
+                background-color: yellow;
+                width: 200px;
+                height: 200px;
+                transition-duration: 2s;
+            }
+            .test2{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                border: 1px solid black;
+
+                transition-duration: 1s;
+            }
+            .test2:hover{
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+
+                transform: rotateZ(180deg);
+
+                /* 원하는 스타일 속성을 작성하여 시간을 따로 지정할 수 있음 */
+                transition-property: background-color, transform, width, height;
+                transition-duration: 2s, 5s, 1s, 2s;
+            }
+            .test3{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                border: 1px solid black;
+
+                transition-duration: 1s;
+            }
+            .test3:hover{
+                background-color: yellow;
+                transform: rotateZ(3600deg);
+                transition-duration: 3s;
+                transition-timing-function: ease-in-out;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>트랜지션</h1>
+        <p>시간에 따라 웹 요소의 스타일 속성이 변화 하는것을 의미</p>
+
+        <h3>트랜지션 진행 시간 지정하기</h3>
+        <div class="test1"></div>
+
+        <hr>
+        <h3>트랜지션 진행 별 시간 설정</h3>
+        <div class="test2"></div>
+
+        <hr>
+        <h3>트랜지션 진행 별 속도 설정</h3>
+        <div class="test3"></div>
+
+    </body>
+</html>

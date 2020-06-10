@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>06.footer 만들기</title>
+    <style>
+        div {
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        /* 전체를 감싸고 있는 footer클래스 크기 지정 */
+        .footer{
+            width: 1000px;
+            height: 150px;
+        }
+
+        #footer-1{
+            width: 100%;
+            height: 20%;
+        }
+        #footer-2{
+            width: 100%;
+            height: 80%;
+        }
+
+        /* footer - 1영역의 a태그 스타일 지정 */
+        #footer-1 > a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin: 0px 10px 0px 10px;
+            /* 상 우 하 좌 */ 
+            line-height: 160%;
+        }
+        /* a태그 마우스 오버 시 색 변화 지정 */
+        #footer-1 > a:hover{
+            color: deepskyblue;
+        }
+
+        /* footer-2 영역 스타일 지정 */
+        #footer-2 > p{
+            font-size: 12px;
+            margin: 0;
+        }
+
+        /* footer-2의 자식 중 첫 번째 p태그 선택 */
+        #footer-2 > p:first-child{
+            height: 80%;
+            width: 100%;
+        }
+
+        #footer-2 > p:last-child{
+            height: 20%;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="footer">
+        <div id="footer-1">
+            <a href="#">이용약관</a> |
+            <a href="#">개인정보취급방식</a> |
+            <a href="#">인재채용</a> |                  
+            <a href="#">고객센터</a>
+        </div>
+
+        <div id="footer-2">
+            <p>
+                강남지원 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F <br>
+                강남지원 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F <br>
+                강남지원 3관 : 서울특별시 강남구 테헤란로 130 호산빌딩 5F, 6F <br>
+                종로지원 : 서울특별시 중구 남대문로 120 대일빌딩 2F, 3F <br>
+                당산지원 : 서울특별시 영등포구 선유동2로 57 이레빌딩 (구관) 19F, 20F
+            </p>
+            <p>
+                Copyright ⓒ 1998-2020 KH Information Educational Institute All Right Reserved
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
