@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+  <meta charset="UTF-8">
+    <title></title>
+    <style>
+      #nav > li{
+        color: red;
+      }
+
+      .test > p{
+        color: blue;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="nav">
+      <li>Hello</li>
+      <li>Hi
+        <ul id="nav2">
+          <li>부수</li>
+          <li>부수</li>
+        </ul>
+      </li>
+      <li>
+        World
+      </li>
+    </ul>
+
+    <div class="test">
+      <p>자손</p>
+      <div>
+        <p>후손</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title></title>
+
+        <style>
+            .wrapper{
+                /* 전체 화면을 둘러싸는 크기 지정 */
+                width: 800px;
+                height: 500px;
+            }
+            .navigator{
+                height: 10%;
+                width: 100%;
+            }
+            .content{
+                height: 90%;
+                width: 100%;
+                clear: both;
+            }
+            #navi{
+                /* 메인 메뉴(ul) */
+                padding: 0;
+
+                /* ul이 차지할 크기 지정 */
+                width: 100%;
+                height: 100%;
+
+                list-style-type: none;
+            }
+
+            #navi > li{
+                float: left;
+                background-color: yellowgreen;
+
+                width: 25%;
+                height: 100%;
+
+                /* 메인 메뉴 글자 상하 가운데 조절 */
+                line-height: 50px;
+
+                /* 서브메뉴 위치를 position : absoulte 지정 하기 위하여 부모에 rel */
+                position: relative;
+            }
+
+            #navi li a{
+                display: inline-block;
+
+                width: 100%;
+
+                text-align: center;
+
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: bold;
+                color: white;
+            }
+            #navi li > ul{
+                /* navu 후손 중 li 태그의 자손중 ul태그 스타일 지정 */
+                position: absolute;
+                width: 100%;
+
+                background-color: lightgreen;
+                list-style-type: none;
+
+                /* margin: 0; */
+                padding: 0;
+
+                opacity: 0;
+            }
+            #navi ul>li>a{
+                opacity: 0;
+            }
+            #navi ul> li{
+                height: 0;
+                line-height: 0;
+            }
+
+            #navi >li:hover ul, #navi > li:hover ul a{
+                opacity: 1;
+            }
+
+            #navi  li:hover ul li{
+                height: 100%;
+                line-height: 50px;
+            }
+
+            #navi li:hover{
+                background-color: green;
+            }
+            #navi li{
+                transition-duration: 0.1s;
+            }
+  
+        </style>
+    </head>
+    <body>
+        <h1>nav</h1>
+
+        <div class="wrapper">
+
+            <div class="navigator">
+
+                <ul id="navi">
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">Front-End</a>
+                        <ul>
+                            <li><a href="#">HTML5</a></li>
+                            <li><a href="#">CSS3</a></li>
+                            <li><a href="#">Javascript</a></li>
+                            <li><a href="#">jQuery</a></li>
+                            <li><a href="#">Ajax</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">게시판</a>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자유게시판</a></li>
+                            <li><a href="#">질문게시판</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Q & A</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="content">
+                <img src="img/main_img2.jpg" width="100%">
+            </div>
+
+        </div>
+    </body>
+</html>
