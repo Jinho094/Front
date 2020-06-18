@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+    <title></title>
+    <style>
+        li{
+            margin-top: 20px;
+        }
+        div{
+            height: 150px;
+            border: 1px solid black;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>연습문제2</h2>
+    <form>
+        <fieldset>
+            <legend>납품정보</legend>
+            <ul>
+                <li>
+                    <label>상품명 : </label>
+                    <input type="text" id="product" name="product" class="delivery">
+                </li>
+                <li>
+                    <label>납품수량 :</label>
+                    <input type="text" id="amount" name="amount" size="5" class="delivery">
+                    <br><br>(최소 수량 : 10, 최대수량 : 100, 10개 단위)<br><br>
+                </li>
+                <li>
+                    <label>납품등급(1~5)등급</label>
+                    <input type="range" id="rate" min="1" max="5" step="1" class="delivery">
+                    <input type="text" id="rateOutput" size="5" readonly>
+                </li>
+                <li>
+                    <label>기타사항</label><br>
+                    <textarea id="etc" rows="3" cols="30" style="resize: none;" class="delivery"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <br>
+        <button onclick="message();">send message</button><br><br>
+    </form>
+    <div id="area"></div>
+    <script>
+        document.getElementById("rate").oninput = function(){
+            document.getElementById("rateOutput").value = this.value + "등급"
+        }
+        
+        function message(){
+            var area = document.getElementById("area");
+
+            var delivery = document.getElementsByClassName("delivery");
+            area.innerHTML = "";
+            console.log(delivery[0]);
+            area.innerHTML += "상품명 : " + delivery[0].value + "<br>"
+                            + "납품수량 : " + delivery[1].value + "<br>"
+                            + "납품등급 : " + delivery[2].value + "<br>"
+                            + "기타사항 : " + delivery[3].value;
+        }
+    </script>
+</body>
+</html>

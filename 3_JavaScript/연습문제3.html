@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+    <title></title>
+    <style>
+        form{
+            margin-top: 50px;
+            text-align: center;
+            width: 500px;
+        }
+        fieldset{
+            background-color: lightgray;
+        }
+        div{
+            background-color: yellow;
+            height: 60px;
+            width: 500px;
+            margin: 15px;
+            padding: 7px;
+        }
+        .area{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>연습문제 3</h2>
+    <form>
+        <fieldset>
+            <legend>검색할 항목을 선택하시오</legend>
+            <input type="radio" value="area1" id="radio1" name="search" onclick="showDiv(this);"><label for="title">제목</label>
+            <input type="radio" value="area2" id="radio2" name="search" onclick="showDiv(this);"><label for="title">날짜</label>
+            <input type="radio" value="area3" id="radio3" name="search" onclick="showDiv(this);"><label for="title">작성자</label>
+        </fieldset>
+    </form>
+
+    <hr>
+    <div id="area1" class="area">
+        <label>검색할 제목을 입력하세요 : </label><br>
+        <input type="text" name="title" size="40"> &nbsp;
+        <button>검색</button>
+    </div> 
+    <div id="area2" class="area">
+        <label>검색할 제목을 입력하세요 : </label><br>
+        <input type="date" id="start" name="date"> - 
+        <input type="date" id="start" name="date">
+        <button>검색</button>
+    </div> 
+    <div id="area3" class="area">
+        <label>검색할 작성자 아이디를 입력하세요 : </label><br>
+        <input type="text" name="title" size="25"> &nbsp;
+        <button>검색</button>
+    </div> 
+
+    <script>
+        function showDiv(el){
+            var area = document.getElementsByClassName("area");
+            
+            for(var i=0 ; i<area.length ; i++){
+                if(el.checked == true  && el.value == area[i].id){
+                    area[i].style.display = "block"
+                }else{
+                    area[i].style.display = "none";
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>
