@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title>03.jQuery 선택자2</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <h1>입력 양식 필터 선택자1</h1>
+
+        텍스트 : <input type="text"><br>
+        비밀번호 : <input type="password"><br>
+        버튼 : <input type="button" value="버튼"><br>
+        submit : <input type="submit" value="버튼"><br>
+        reset : <input type="reset" value="버튼"><br>
+        체크박스 : <input type="checkbox"><br>
+        라디오 : <input type="radio"><br>
+        파일 : <input type="file"><br>
+        이미지 : <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Metro_do_Porto_linha_D.svg">
+
+        <script>
+            $("input:text").css("backgroundColor", "red");
+            $("input:password").css("backgroundColor", "green");
+            $("input:button").css({"width":"100px","height" : "100px"});
+            $("input:submit").css("backgroundColor","pink").css("color","white").val("submit");
+            $("input:reset").css("backgroundColor","blue").css("color","white").val("reset");
+            $("input:checkbox").css({"width":"100px", "height" : "100px"});
+            $("input:radio").prop("checked", true);
+            $("input:file").css("backgroundColor","green");
+
+            // mouseenter() : 마우스가 요소 경계 내부로 들어올 경우 이벤트 발생
+            // mouseleave() : 마우스가 요소 경계 내부로 나갈 경우 이벤트 발생
+
+            $("input:image").mouseenter(function(){
+                // this : 이벤트가 발생한 요소
+                // $(this) : 이벤트가 발생한 요소를 선택
+                $(this).attr("src", "https://w.namu.la/s/9071d0575b6d14c0d6fc5832e26fe8ef0a298a1abb1d442cc3c865534ec5e949e8a2d195fe425ebb15f2f1f5b270e6b86979bd1e3fcb4e9d9432bdfbf4fb02a639aab22a01a395990a8d041228a92019c0cac5ba9759ecdeef137b1493e9a5ab")
+            });
+            $("input:image").mouseleave(function(){
+                // this : 이벤트가 발생한 요소
+                // $(this) : 이벤트가 발생한 요소를 선택
+                $(this).attr("src", "https://upload.wikimedia.org/wikipedia/commons/3/3d/Metro_do_Porto_linha_D.svg")
+            });
+        </script>
+
+    </body>
+</html>

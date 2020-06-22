@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title></title>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <style>
+            div{
+                border: 1px solid black;
+                display: inline-block;
+                width: 150px;
+                height: 150px;
+                text-align: center;
+                line-height: 150px;
+                font-size: 17px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="area1" class="area">red</div>
+        <div id="area2" class="area">orange</div>
+        <div id="area3" class="area">magenta</div>
+        <div id="area4" class="area">green</div>
+        <div id="area5" class="area">yellow</div>
+        <script>
+
+            $(".area").click(function(){
+                var color = $(this).text();
+
+                // console.log( $(this).css("backgroundColor") );
+
+                if( $(this).css("backgroundColor") == "rgba(0, 0, 0, 0)"){
+                    $(this).css("backgroundColor", color);
+                    // $(this).css("color", color);
+                }else{
+                    $(this).css("backgroundColor", "rgba(0, 0, 0, 0)");
+                }
+            });
+
+            $(function(){ // 문서가 로딩이 된 이후 수행
+                var arr = $(".area");
+                for(var i = 0; i < arr.length; i++){
+                    $(arr[i]).css("color", $(arr[i]).text());
+                }
+
+            });
+        </script>
+    </body>
+</html>
