@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+        td{
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <H1>빙고판만들기</H1>
+    <label>행 : </label><input type="number" id="rows">
+    <label>열 : </label><input type="number" id="cols">
+    <button id="btn">생성</button>
+    <br>
+    <table id="tbl"></table>
+
+    <script>
+
+        $("#btn").click(function(){
+            var tbl = $("#tbl");
+            var rows = parseInt(document.getElementById("rows").value);
+            var cols = parseInt(document.getElementById("cols").value);
+
+            var arr = new Array(rows * cols);
+
+            for(var i = 0; i < arr.length; i++){
+                arr[i] = Math.floor(Math.random() * arr.length + 1);
+                for(var j = 0; j < i; j++){
+                    if(arr[j] == arr[i]){
+                        i--;
+                    }
+                }
+            }
+            var tdArr = new Array(cols);
+        
+            var tr = new Array(cols);
+            for(var j = 0; j < cols; j++){
+            tr[j] = "<tr>";
+                for (var i = j * cols; i < (j+1)*cols; i++){
+                    var td = "<td>" + arr[i] + "</td>";
+                    tr[j] += td;
+                }
+
+            tr[j] += "</tr>";
+            $("#tbl").append(tr[j]);
+            }
+
+        });
+
+    </script>
+</body>
+</html>

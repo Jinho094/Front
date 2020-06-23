@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+        <title></title>
+        <style>
+            td *{
+                margin: 5px;
+            }
+            .area{
+                border: 1px solid black;
+                height: 177px;
+                cursor: pointer;
+            }
+            input{
+                height: 25px;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        </style>
+        <script src= "https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td><div id="area1" class="area"></div></td>
+                <td><div id="area2" class="area"></div></td>
+                <td><div id="area3" class="area"></div></td>
+                <td><div id="area4" class="area"></div></td>
+                <td><div id="area5" class="area"></div></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="input0" class="input"></td>
+                <td><input type="text" id="input1" class="input"></td>
+                <td><input type="text" id="input2" class="input"></td>
+                <td><input type="text" id="input3" class="input"></td>
+                <td><input type="text" id="input4" class="input"></td>
+            </tr>
+        </table>
+
+        <script>
+
+            $(".area").click(function(){
+                if( this.style.backgroundColor != ""){
+                    // 현재 선택한 요소의 배경색이 color 변수값인 경우
+                    this.style.backgroundColor = "";
+                }else{
+                    var index = "input"+$(this).index(".area");
+                     $(this).css("backgroundColor",$("#"+index).val());
+                }
+            });
+            $(".input").keyup(function(){
+                var color = $(this).val();
+                $(this).css("color", color);
+            });
+        </script>
+    </body>
+</html>
